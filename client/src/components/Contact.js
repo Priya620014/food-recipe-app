@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { FaUser, FaTelegramPlane, FaRegEnvelope, FaFileAlt } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
-import "../css/multi.css"; // Assuming custom CSS
+import "../css/multi.css"; 
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({

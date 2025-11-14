@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import loginImage from "../assets/login.jpg";
+import loginImage from "../assets/login1.png";
 import { BACKEND_URL } from "../config/config";
 import BackgroundImage from "../assets/background.jpg";
 
