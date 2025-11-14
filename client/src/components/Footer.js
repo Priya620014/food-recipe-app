@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faDiscord, faInstagram, faTelegram, faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faInstagram, faTelegram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start mb-4 md:mb-0">
           <img src={logo} alt="Logo" className="w-20 h-auto mb-2" />
           <p className="text-center md:text-left text-sm">
-            &copy; {new Date().getFullYear()} <a class="hover:text-green-400 text-red-400" href="https://github.com/MrAbhi2k3">MrAbhi2k3</a>. All Rights Reserved.
+            &copy; {new Date().getFullYear()} <a class="hover:text-green-400 text-red-400" href="https://github.com/Priya620014">Recipe Rebels</a>. All Rights Reserved.
           </p>
         </div>
 
@@ -47,21 +47,25 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-end mt-4 md:mt-0">
           <h3 className="text-lg font-semibold mb-2">Follow Us</h3>
           <div className="flex space-x-4">
-            <a href="https://github.com/mrabhi2k3" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
+            <a href="https://github.com/Priya620014" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
-            <a href="https://discord.gg/qPDzU64r" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
+            {/* <a href="https://discord.gg/qPDzU64r" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
               <FontAwesomeIcon icon={faDiscord} size="2x" />
-            </a>
-            <a href="https://instagram.com/mrabhi_2k3" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
+            </a> */}
+            <a href="https://www.instagram.com/priyanshiraj_192/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
               <FontAwesomeIcon icon={faInstagram} size="2x" />
             </a>
-            <a href="https://t.me/TeleRoidGRoup" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
+            <a href="https://web.telegram.org/a/#6198476923" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
               <FontAwesomeIcon icon={faTelegram} size="2x" />
             </a>
-            <a href="https://facebook.com/MrAbhi2k3" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition duration-200">
-              <FontAwesomeIcon icon={faFacebook} size="2x" />
-            </a>
+
+            <a href="https://www.linkedin.com/in/priyanshi-raj-806852271/"  target="_blank"  rel="noopener noreferrer"className="hover:text-blue-700 transition duration-200"
+>
+  <FontAwesomeIcon icon={faLinkedin} size="2x" />
+</a>
+
+            
           </div>
         </div>
       </div>
@@ -69,7 +73,7 @@ const Footer = () => {
       {/* Divider and Bottom Text */}
       <div className="border-t border-gray-700 mt-6 pt-4">
         <p className="text-center text-sm text-gray-400">
-          Designed and Developed with ❤️ by <a class="hover:text-green-400 text-red-400" href="https://github.com/MrAbhi2k3">MrAbhi2k3</a>. For inquiries, contact us via social media or email.
+          Designed and Developed with ❤️ by <a class="hover:text-green-400 text-red-400" href="https://github.com/Priya620014">Recpie Rebels</a>. For inquiries, contact us via social media or email.
         </p>
       </div>
     </footer>
