@@ -167,6 +167,33 @@ const searchRecipes = async (req, res) => {
   }
 };
 
+const generateIngredients = async (req, res) => {
+  try {
+    const recipeId = req.params.id;
+
+    const recipe = await Recipe.findById(recipeId);
+    if (!recipe) {
+      return res.status(404).json({ error: "Recipe not found" });
+    }
+
+    // Use real ingredients from the database recipe
+    const ingredients = recipe.ingredients || [];
+
+    if (ingredients.length === 0) {
+      return res.json({
+        ingredients: ["No ingredients found for this recipe"]
+      });
+    }
+
+    res.json({ ingredients });
+  } catch (error) {
+    console.error("Error generating ingredients:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+};
+
+
+
 module.exports = {
   getAllRecipes,
   createRecipe,
@@ -177,4 +204,5 @@ module.exports = {
   removeFromLikedRecipes,
   searchRecipes,
   getRecipeById,
+  generateIngredients,
 };

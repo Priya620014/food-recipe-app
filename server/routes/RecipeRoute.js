@@ -3,6 +3,7 @@ const router = express.Router();
 const verifyToken = require("../Middleware/middleware");
 const { getRecipeById } = require("../controllers/RecipeController");
 
+
 const {
   getAllRecipes,
   createRecipe,
@@ -12,6 +13,7 @@ const {
   removeFromLikedRecipes,
   searchRecipes,
   updateRecipe,
+  generateIngredients,
 } = require("../controllers/RecipeController");
 
 // Route definitions
@@ -24,5 +26,7 @@ router.delete("/removeLiked/:id", removeFromLikedRecipes);
 router.get("/searchRecipes/:key", searchRecipes);
 router.put("/recipe/:id", updateRecipe);
 router.get("/recipe/:id", verifyToken, getRecipeById);
+router.get("/generateIngredients/:id", generateIngredients);
+
 
 module.exports = router;

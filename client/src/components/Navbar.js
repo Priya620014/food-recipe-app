@@ -1,7 +1,7 @@
-
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import DarkModeToggle from "./DarkMode";
 import {
   faBars,
   faUtensils,
@@ -39,7 +39,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-[#F4A261] shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-2 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-2 flex justify-between items-center relative">
+
         <div className="flex items-center">
           <FontAwesomeIcon
             icon={faBars}
@@ -47,13 +48,14 @@ const Navbar = () => {
             onClick={toggleMenu}
             style={isOpen ? { transform: "rotate(90deg)" } : {}}
           />
+
           <NavLink to="/" className="text-white text-xl font-semibold">
-            <img
-              src={logo}
-              alt="Logo"
-              className="h-12 w-auto ml-4 transition-all duration-300"
-            />
+            <img src={logo} alt="Logo" className="h-12 w-auto ml-4 transition-all duration-300" />
           </NavLink>
+        </div>
+
+        <div className="hidden md:flex items-center mr-4">
+          <DarkModeToggle />
         </div>
 
         <div
@@ -62,6 +64,13 @@ const Navbar = () => {
           } md:block`}
         >
           <ul className="flex flex-col md:flex-row items-center md:space-x-6 space-y-4 md:space-y-0 bg-[#F4A261] md:bg-transparent p-4 md:p-0 rounded-lg">
+
+            {isOpen && (
+              <li className="md:hidden flex justify-center mb-2">
+                <DarkModeToggle />
+              </li>
+            )}
+
             {auth ? (
               <>
                 <li>
@@ -165,10 +174,13 @@ const Navbar = () => {
             )}
           </ul>
         </div>
+
+        <div className="md:hidden absolute right-4 top-3">
+          <DarkModeToggle />
+        </div>
       </div>
     </nav>
   );
 };
 
 export default Navbar;
-
